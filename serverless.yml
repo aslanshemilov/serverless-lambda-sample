@@ -61,7 +61,7 @@ functions:
       #DT_CONNECTION_POINT: ${ssm:/dkhan/lambda/aws-nodejs-lambda/DT_CONNECTION_POINT}
       #DT_TENANTTOKEN: ${ssm:/dkhan/lambda/aws-nodejs-lambda/DT_TENANTTOKEN}
       #DT_TENANT: ${ssm:/dkhan/lambda/aws-nodejs-lambda/DT_TENANT}
-      DT_LAMBDA_OPTIONS: ${ssm:/dkhan/lambda/aws-nodejs-lambda/DT_LAMBDA_OPTIONS}
+      DT_LAMBDA_OPTIONS: ${ssm:/dynatrace/lambda/serverless-node-js/DT_LAMBDA_OPTIONS}
     events:
       - http:
           path: users/create
