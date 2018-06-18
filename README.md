@@ -12,6 +12,13 @@ This is a sample app that shows how to deploy Dynatrace via serverless
 6. Click on 'Deploy Dynatrace', select 'Set up Serverless integration' and then 'Node.js'
 7. Copy the DT_LAMBDA_OPTIONS environment settings
 8. Paste the json into a file `.dynatrace-aws.json` - make sure it isn't committed (.gitignore is already set up)
-9. Run `aws ssm put-parameter --name "/dynatrace/lambda/serverless-node-js/DT_LAMBDA_OPTIONS" --value "file://.dynatrace-aws.json" --type String --region us-east-1 --overwrite` on tghe terminal.
-(The config path is arbitrary - it just needs to be consistent with the setting in serverless.yml, E.g. `DT_LAMBDA_OPTIONS: ${ssm:/dynatrace/lambda/serverless-node-js/DT_LAMBDA_OPTIONS}`)
+9. In the terminal run 
+```bash
+aws ssm put-parameter --name "/dynatrace/lambda/serverless-node-js/DT_LAMBDA_OPTIONS" --value "file://.dynatrace-aws.json" --type String --region us-east-1 --overwrite
+``` 
+The config path is arbitrary - it just needs to be consistent with the setting in serverless.yml, E.g. 
+
+```yml
+DT_LAMBDA_OPTIONS: ${ssm:/dynatrace/lambda/serverless-node-js/DT_LAMBDA_OPTIONS}
+```
 10. Run `serverless deploy` on the console.
