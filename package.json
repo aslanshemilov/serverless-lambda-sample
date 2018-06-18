@@ -1,0 +1,16 @@
+{
+  "name": "aws-nodejs-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailor": "dt-oneagent-tailor --AwsLambdaV8"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dynatrace/oneagent": "^1.143.165-1.0.0"
+  }
+}
